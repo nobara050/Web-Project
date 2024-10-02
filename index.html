@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navigation with Dropdown</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header></header>
+      <nav>
+        <div class="nav_wrapper">
+          <div class="nav_logo">
+            <a href="#"><img src="./images/logo.png" alt="" /></a>
+          </div>
+          <div class="nav_search">
+            <form action="">
+              <input type="text" placeholder="Search.." name="search" />
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <div class="nav_menu">
+            <ul>
+              <li>
+                <a href="#">
+                  <img
+                    src="./images/logo_hotline.png"
+                    class="logo_cho_header"
+                  />
+                  <p>Hotline</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="./images/logo_showroom.png"
+                    class="logo_cho_header"
+                  />
+                  <p>Hệ thống showroom</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="./images/logo_donhang.png"
+                    class="logo_cho_header"
+                  />
+                  <p>Tra cứu đơn hàng</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/logo_cart.png" class="logo_cho_header" />
+                  <p>Giỏ hàng</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/logo_user.png" class="logo_cho_header" />
+                  <p>Đăng nhập</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Dropdown button for small screens -->
+          <a href="#" class="dropdown-toggle" id="menu-toggle">
+            <img src="./images/logo_menu.png" alt="" />
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Hotline</a></li>
+            <li><a href="#">Hệ thống showroom</a></li>
+            <li><a href="#">Tra cứu đơn hàng</a></li>
+            <li><a href="#">Giỏ hàng</a></li>
+            <li><a href="#">Đăng nhập</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="wp-content">
+        <div id="sidebar">
+          <ul>
+            <li>Laptop</li>
+            <li>Laptop Gaming</li>
+            <li>Main, CPU, VGA</li>
+            <li>Case, Nguồn, Tản</li>
+            <li>Ổ cứng, Ram, Thẻ nhớ</li>
+            <li>Loa, Micro, Webcam</li>
+            <li>Màn hình</li>
+            <li>Bàn phím</li>
+            <li>Chuột + Lót chuột</li>
+            <li>Tai nghe</li>
+            <li>Ghế - Bàn</li>
+            <li>Phụ kiện (Hub,sạc,cáp...)</li>
+          </ul>
+        </div>
+        <div id="content">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum animi
+          doloremque omnis suscipit perspiciatis nesciunt? Ipsa dolorem incidunt
+          earum aspernatur omnis velit adipisci aliquam quisquam soluta?
+          Repudiandae laudantium fuga delectus.
+        </div>
+      </div>
+      <footer>
+        <span>Tác giả: Nguyễn Tiến Đạt</span>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

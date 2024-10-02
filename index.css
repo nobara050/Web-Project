@@ -1,0 +1,181 @@
+/* Loại bỏ khoảng trống mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+#wrapper {
+  margin: 0 auto; /* Căn giữa trang */
+}
+
+#wp-content {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  min-height: 1200px;
+  clear: both;
+}
+
+#sidebar {
+  flex-basis: 18%;
+  padding: 15px;
+}
+
+#content {
+  flex-basis: 82%;
+  padding: 15px;
+}
+
+footer {
+  background: gray;
+  padding: 15px;
+  margin: 0;
+  text-align: center;
+}
+
+nav {
+  background: #e8041c;
+  height: 75px;
+  position: sticky;
+  top: 0;
+}
+
+nav .nav_wrapper {
+  max-width: 1200px;
+  height: 75px;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav .nav_wrapper .nav_logo img {
+  height: 75px;
+  width: auto;
+}
+
+nav .nav_wrapper .nav_search {
+  margin: auto 0;
+}
+
+nav .nav_wrapper .nav_search form {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav .nav_wrapper .nav_search input[type="text"] {
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+}
+
+nav .nav_wrapper .nav_search button {
+  padding: 6px 10px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+nav .nav_wrapper .nav_menu ul {
+  margin: 0;
+  padding: 0;
+  display: flex; /* Dùng flexbox để căn giữa các phần tử */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  height: 100%;
+}
+
+nav .nav_wrapper .nav_menu ul li {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .nav_wrapper .nav_menu ul li a img {
+  width: 25px;
+  height: auto;
+  margin: 10px; /* Khoảng cách giữa ảnh và chữ */
+}
+
+nav .nav_wrapper .nav_menu ul li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  max-width: 110px; /* Chiều rộng tối đa của button */
+  word-wrap: break-word; /* Chia từ nếu chúng quá dài */
+  white-space: normal; /* Cho phép xuống dòng */
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  text-align: center; /* Căn giữa chữ theo chiều ngang nếu có nhiều dòng */
+}
+
+nav .nav_wrapper .dropdown-toggle {
+  display: none; /* Ẩn mặc định */
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  margin: auto 0;
+}
+nav .nav_wrapper .dropdown-toggle img {
+  width: auto;
+  height: 30px;
+}
+
+nav .nav_wrapper .dropdown-menu {
+  display: none; /* Ẩn dropdown menu mặc định */
+  position: absolute;
+  top: 75px; /* Đặt nó xuống dưới navbar */
+  right: 0; /* Đảm bảo nó căn phải so với màn hình */
+  background: #e8041c;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 0 0 5px 5px; /* Thêm bo góc cho dropdown */
+}
+
+nav .nav_wrapper .dropdown-menu li {
+  padding: 10px 0;
+}
+
+nav .nav_wrapper .dropdown-menu li a {
+  color: #fff;
+  display: block;
+  padding: 5px 0;
+  text-align: center;
+}
+
+/* Đảm bảo dropdown sẽ hiện ra khi nhấn vào dropdown-toggle */
+nav .nav_wrapper .dropdown-menu.active {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  /* Hiển thị nút dropdown khi màn hình nhỏ */
+  nav .nav_wrapper .dropdown-toggle {
+    display: block; /* Hiển thị dropdown toggle button */
+    margin-left: auto; /* Căn phải so với menu */
+  }
+
+  /* Ẩn menu chính */
+  nav .nav_wrapper .nav_menu ul {
+    display: none; /* Ẩn menu chính khi màn hình nhỏ */
+  }
+
+  /* Hiển thị dropdown khi nhấn */
+  nav .nav_wrapper .dropdown-menu.active {
+    display: block; /* Khi có class 'active', hiển thị dropdown */
+    right: 0; /* Đảm bảo nó nằm ở góc phải */
+    left: auto; /* Đảm bảo không có phần căn trái */
+  }
+}
