@@ -1,4 +1,9 @@
-/* Loại bỏ khoảng trống mặc định */
+/* ================================================== */
+/* ================================================== */
+/* ================== Layout ======================== */
+/* ================================================== */
+/* ================================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,14 +16,9 @@
   margin: 0 auto; /* Căn giữa trang */
 }
 
-#wp-content {
+.wp-content {
   margin: 0 auto;
   max-width: 1300px;
-  display: flex;
-  clear: both;
-  margin-top: 20px;
-  padding: 0;
-  margin-bottom: 0px;
 }
 
 #sidebar {
@@ -26,11 +26,14 @@
   padding: 15px;
 }
 
-#content {
+.content1 {
   flex-basis: 82%;
   padding: 0;
   max-height: px;
   margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 footer {
@@ -46,6 +49,12 @@ nav {
   position: sticky;
   top: 0;
 }
+
+/* ================================================== */
+/* ================================================== */
+/* ================== Nav here ====================== */
+/* ================================================== */
+/* ================================================== */
 
 nav .nav_wrapper {
   max-width: 1200px;
@@ -89,8 +98,8 @@ nav .nav_wrapper .nav_search button {
 nav .nav_wrapper .nav_menu ul {
   margin: 0;
   padding: 0;
-  display: flex; /* Dùng flexbox để căn giữa các phần tử */
-  align-items: center; /* Căn giữa theo chiều dọc */
+  display: flex;
+  align-items: center;
   height: 100%;
 }
 
@@ -104,20 +113,20 @@ nav .nav_wrapper .nav_menu ul li {
 nav .nav_wrapper .nav_menu ul li a img {
   width: 25px;
   height: auto;
-  margin: 10px; /* Khoảng cách giữa ảnh và chữ */
+  margin: 10px;
 }
 
 nav .nav_wrapper .nav_menu ul li a {
   color: #fff;
   font-size: 14px;
   font-weight: bold;
-  max-width: 110px; /* Chiều rộng tối đa của button */
-  word-wrap: break-word; /* Chia từ nếu chúng quá dài */
-  white-space: normal; /* Cho phép xuống dòng */
+  max-width: 110px;
+  word-wrap: break-word;
+  white-space: normal;
   display: flex;
-  align-items: center; /* Căn giữa theo chiều dọc */
-  justify-content: center; /* Căn giữa theo chiều ngang */
-  text-align: center; /* Căn giữa chữ theo chiều ngang nếu có nhiều dòng */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 nav .nav_wrapper .dropdown-toggle {
@@ -166,6 +175,12 @@ nav .nav_wrapper .dropdown-menu.active {
   opacity: 1;
 }
 
+/* ================================================== */
+/* ================================================== */
+/* ================== Sidebar  ====================== */
+/* ================================================== */
+/* ================================================== */
+
 #sidebar {
   width: 250px;
   background-color: #f8f9fa;
@@ -208,94 +223,86 @@ nav .nav_wrapper .dropdown-menu.active {
   transform: translateX(5px);
 }
 
-#content {
+/* ================================================== */
+/* ================================================== */
+/* ================ WP-Content1  ==================== */
+/* ================================================== */
+/* ================================================== */
+
+.wp-content1 {
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+  clear: both;
+  margin-top: 20px;
   padding: 0;
+  margin-bottom: 0px;
 }
 
-#content .banner_top_1 {
+.content1 .banner_top_1 {
   flex: 1 1 60%; /* Chiếm 60% chiều rộng container */
-  max-width: 650px; /* Giới hạn chiều rộng tối đa */
+  max-width: 650px;
+  max-height: 325px;
+  min-width: 650px;
+  min-height: 325px;
 }
 
-#content .banner_top_2_3 {
+.content1 .banner_top_2_3 {
   margin-left: 10px;
 }
 
-#content .banner_top_4_6 {
+.content1 .banner_top_4_6 {
   margin-right: 8px;
 }
-#content .banner_top_2_3,
-#content .banner_top_4_6 {
+.content1 .banner_top_2_3,
+.content1 .banner_top_4_6 {
   flex: 1 1 20%; /* Mỗi hình nhỏ chiếm 20% chiều rộng container */
   max-width: 320px; /* Giới hạn chiều rộng tối đa */
+  max-height: 150px;
+  min-height: 150;
+  min-width: 300px;
 }
 
-#content .banner_top_2_3 a img,
-#content .banner_top_4_6 a img {
+.content1 .banner_top_2_3 a img,
+.content1 .banner_top_4_6 a img {
   width: 100%; /* Hình ảnh sẽ chiếm toàn bộ chiều rộng của container */
   height: auto; /* Giữ tỷ lệ của hình ảnh */
 }
 
-#content .banner_top_1 a img {
+.content1 .banner_top_1 a img {
   width: 100%; /* Hình ảnh lớn sẽ chiếm toàn bộ chiều rộng container */
   height: auto; /* Giữ tỷ lệ của hình ảnh */
 }
 
-.wp-content1 {
-  margin: 0 auto;
-  max-width: 1300px;
+/* ================================================== */
+/* ================================================== */
+/* ================ WP-Content2  ==================== */
+/* ================================================== */
+/* ================================================== */
+
+.wp-content2 {
   display: flex;
   clear: both;
-  margin-top: 0px;
+  gap: 9px;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
-.wp-content1 .banner_top_7_10 a img {
-  margin: 5px;
-  margin-top: 2px;
-  max-width: 300px; /* Đặt chiều rộng tối đa cho hình ảnh */
-  width: 100%; /* Hình ảnh sẽ co giãn theo chiều rộng của phần tử chứa */
-  height: auto; /* Giữ tỉ lệ khung hình của hình ảnh */
+.wp-content2 .banner_top_7_10 a img {
+  min-height: 150;
+  min-width: 300px;
+  max-height: 150;
+  max-width: 300px;
+  width: 100%;
 }
 
-/* Media query cho màn hình nhỏ */
-@media (max-width: 1225px) and (min-width: 1100px) {
-  /* Hiển thị nút dropdown khi màn hình nhỏ */
-  nav .nav_wrapper .dropdown-toggle {
-    display: block; /* Hiển thị dropdown toggle button */
-    margin-left: auto; /* Căn phải so với menu */
-  }
-
-  /* Ẩn menu chính */
-  nav .nav_wrapper .nav_menu ul {
-    display: none; /* Ẩn menu chính khi màn hình nhỏ */
-  }
-
-  /* Hiển thị dropdown khi nhấn */
-  nav .nav_wrapper .dropdown-menu.active {
-    display: block; /* Khi có class 'active', hiển thị dropdown */
-    right: 0; /* Đảm bảo nó nằm ở góc phải */
-    left: auto; /* Đảm bảo không có phần căn trái */
-  }
-  #content {
-    flex-wrap: wrap;
-  }
-
-  #content .banner_top_1 {
-    flex-basis: 100%; /* Mỗi hình sẽ chiếm toàn bộ chiều rộng container */
-    max-width: 100%;
-  }
-  #content .banner_top_2_3,
-  #content .banner_top_4_6 {
-    display: none;
-  }
-}
+/* ================================================== */
+/* ================================================== */
+/* ================ Responsive ====================== */
+/* ================================================== */
+/* ================================================== */
 
 /* Media query cho màn hình rất nhỏ (600px trở xuống) */
-@media (max-width: 1100px) and (min-width: 0px) {
+@media (max-width: 1270px) {
   nav .nav_wrapper .dropdown-toggle {
     display: block;
     margin-left: auto;
@@ -305,7 +312,11 @@ nav .nav_wrapper .dropdown-menu.active {
     display: none;
   }
 
-  #wp-content {
+  nav .nav_wrapper .nav_logo {
+    display: none;
+  }
+
+  .wp-content1 {
     display: none;
   }
 }
