@@ -13,11 +13,12 @@
 
 #wp-content {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1300px;
   display: flex;
   clear: both;
   margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 0;
+  margin-bottom: 10px;
 }
 
 #sidebar {
@@ -27,8 +28,9 @@
 
 #content {
   flex-basis: 82%;
-  padding: 15px;
-  max-height: 370px ;
+  padding: 0;
+  max-height: 370px;
+  margin-left: 10px;
 }
 
 footer {
@@ -182,21 +184,94 @@ nav .nav_wrapper .dropdown-menu.active {
   opacity: 1; /* Make it visible when active */
 }
 
-@media (max-width: 600px){
-  nav .nav_wrapper .dropdown-toggle {
-    display: none; /* Hiển thị dropdown toggle button */
-    margin-left: auto; /* Căn phải so với menu */
-  }
-  /* Ẩn menu chính */
-  nav .nav_wrapper .nav_menu ul {
-    display: none; /* Ẩn menu chính khi màn hình nhỏ */
-  }
-  #sidebar{
-    display: none;
-  }
+#sidebar {
+  width: 250px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 2px solid #ddd; /* Added border around sidebar */
+  border-radius: 8px; /* Optional: Rounded corners */
 }
 
-@media (max-width: 1200px) and (min-width: 600px) {
+#sidebar ul li {
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+
+/* Styling for the menu links */
+#sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  display: flex;
+  padding: 6px 6px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.3s ease;
+  align-items: center;
+}
+
+#sidebar ul li a img {
+  max-height: 23px;
+  width: auto;
+  padding-right: 10px;
+}
+
+/* Hover effect */
+#sidebar ul li a:hover {
+  background: #e8041c; /* Change background color to blue */
+  color: white; /* Change text color to white */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow effect */
+  transform: translateX(5px); /* Add small slide effect */
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các phần tử xuống dòng nếu không đủ không gian */
+  gap: 5px;
+  padding: 0;
+}
+
+#content .banner_top_1 {
+  flex: 1 1 60%; /* Chiếm 60% chiều rộng container */
+  max-width: 650px; /* Giới hạn chiều rộng tối đa */
+}
+
+#content .banner_top_2_3 {
+  margin-left: 10px;
+}
+
+#content .banner_top_4_6 {
+  margin-right: 8px;
+}
+#content .banner_top_2_3,
+#content .banner_top_4_6 {
+  flex: 1 1 20%; /* Mỗi hình nhỏ chiếm 20% chiều rộng container */
+  max-width: 320px; /* Giới hạn chiều rộng tối đa */
+}
+
+#content .banner_top_2_3 a img,
+#content .banner_top_4_6 a img {
+  width: 100%; /* Hình ảnh sẽ chiếm toàn bộ chiều rộng của container */
+  height: auto; /* Giữ tỷ lệ của hình ảnh */
+}
+
+#content .banner_top_1 a img {
+  width: 100%; /* Hình ảnh lớn sẽ chiếm toàn bộ chiều rộng container */
+  height: auto; /* Giữ tỷ lệ của hình ảnh */
+}
+
+.wp-content {
+  margin: 0 auto;
+  max-width: 1300px;
+  display: flex;
+  clear: both;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: 1200px;
+}
+
+/* Media query cho màn hình nhỏ */
+@media (max-width: 1225px) and (min-width: 1100px) {
   /* Hiển thị nút dropdown khi màn hình nhỏ */
   nav .nav_wrapper .dropdown-toggle {
     display: block; /* Hiển thị dropdown toggle button */
@@ -214,46 +289,32 @@ nav .nav_wrapper .dropdown-menu.active {
     right: 0; /* Đảm bảo nó nằm ở góc phải */
     left: auto; /* Đảm bảo không có phần căn trái */
   }
-  #sidebar{
+  #content {
+    flex-wrap: wrap;
+  }
+
+  #content .banner_top_1 {
+    flex-basis: 100%; /* Mỗi hình sẽ chiếm toàn bộ chiều rộng container */
+    max-width: 100%;
+  }
+  #content .banner_top_2_3,
+  #content .banner_top_4_6 {
     display: none;
   }
 }
 
-#sidebar {
-  width: 250px;
-  background-color: #f8f9fa;
-  padding: 10px;
-  border: 2px solid #ddd;  /* Added border around sidebar */
-  border-radius: 8px;      /* Optional: Rounded corners */
-}
+/* Media query cho màn hình rất nhỏ (600px trở xuống) */
+@media (max-width: 1100px) and (min-width: 0px) {
+  nav .nav_wrapper .dropdown-toggle {
+    display: block;
+    margin-left: auto;
+  }
 
-#sidebar ul li {
-  margin: 0px 0px;
-  padding: 0px 0px;
-}
+  nav .nav_wrapper .nav_menu ul {
+    display: none;
+  }
 
-/* Styling for the menu links */
-#sidebar ul li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
-  display: flex;
-  padding: 6px 6px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-  align-items: center;
-}
-
-#sidebar ul li a img{
-  max-height: 23px;
-  width: auto;
-  padding-right: 10px;
-}
-
-/* Hover effect */
-#sidebar ul li a:hover {
-  background: #e8041c;  /* Change background color to blue */
-  color: white;               /* Change text color to white */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow effect */
-  transform: translateX(5px); /* Add small slide effect */
+  #wp-content {
+    display: none;
+  }
 }
