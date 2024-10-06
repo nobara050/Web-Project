@@ -22,8 +22,10 @@
 }
 
 #sidebar {
-  flex-basis: 18%;
+  flex-basis: 20%;
   padding: 15px;
+  align-items: center;
+  display: flex;
 }
 
 .content1 {
@@ -187,13 +189,7 @@ nav .nav_wrapper .dropdown-menu.active {
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 8px;
-  min-height: 488px;
-  max-height: 488px;
-}
-
-#sidebar ul li {
-  margin: 0px 0px;
-  padding: 0px 0px;
+  min-height: 500px;
 }
 
 /* Styling for the menu links */
@@ -239,11 +235,8 @@ nav .nav_wrapper .dropdown-menu.active {
 }
 
 .content1 .banner_top_1 {
-  flex: 1 1 60%; /* Chiếm 60% chiều rộng container */
-  max-width: 650px;
-  max-height: 325px;
-  min-width: 650px;
-  min-height: 325px;
+  max-width: 670px;
+  max-height: 330px;
 }
 
 .content1 .banner_top_2_3 {
@@ -255,11 +248,8 @@ nav .nav_wrapper .dropdown-menu.active {
 }
 .content1 .banner_top_2_3,
 .content1 .banner_top_4_6 {
-  flex: 1 1 20%; /* Mỗi hình nhỏ chiếm 20% chiều rộng container */
-  max-width: 320px; /* Giới hạn chiều rộng tối đa */
+  max-width: 330px;
   max-height: 150px;
-  min-height: 150;
-  min-width: 300px;
 }
 
 .content1 .banner_top_2_3 a img,
@@ -269,8 +259,8 @@ nav .nav_wrapper .dropdown-menu.active {
 }
 
 .content1 .banner_top_1 a img {
-  width: 100%; /* Hình ảnh lớn sẽ chiếm toàn bộ chiều rộng container */
-  height: auto; /* Giữ tỷ lệ của hình ảnh */
+  width: 100%;
+  height: auto;
 }
 
 /* ================================================== */
@@ -287,12 +277,15 @@ nav .nav_wrapper .dropdown-menu.active {
   margin-top: 10px;
 }
 
-.wp-content2 .banner_top_7_10 a img {
-  min-height: 150;
-  min-width: 300px;
-  max-height: 150;
-  max-width: 300px;
+.wp-content2 .banner_top_7_10 a {
+  display: block;
   width: 100%;
+}
+.wp-content2 .banner_top_7_10 a img {
+  width: 100%;
+  height: auto;
+  max-width: 313px;
+  max-height: 156.5px;
 }
 
 /* ================================================== */
@@ -302,7 +295,7 @@ nav .nav_wrapper .dropdown-menu.active {
 /* ================================================== */
 
 /* Media query cho màn hình rất nhỏ (600px trở xuống) */
-@media (max-width: 1270px) {
+@media (max-width: 1300px) {
   nav .nav_wrapper .dropdown-toggle {
     display: block;
     margin-left: auto;
