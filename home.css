@@ -52,6 +52,11 @@ nav {
   top: 0;
 }
 
+/* ================================================== */
+/* ================================================== */
+/* ================= Header here ==================== */
+/* ================================================== */
+/* ================================================== */
 header {
   background: #1b1f2a;
 }
@@ -247,9 +252,78 @@ nav .nav_wrapper .dropdown-menu.active {
   margin-bottom: 0px;
 }
 
-.content1 .banner_top_1 {
-  max-width: 670px;
-  max-height: 330px;
+.content1 .banner_top_1 .banner_top1-slider-wrapper {
+  position: relative;
+  max-width: 660px;
+  max-height: 325px;
+  margin: 0 auto;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.content1 .banner_top_1 .banner_top1-slider-wrapper .banner_top1-slider {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 0.5rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.content1
+  .banner_top_1
+  .banner_top1-slider-wrapper
+  .banner_top1-slider::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, WebKit-based browsers */
+}
+
+.content1 .banner_top_1 .banner_top1-slider-wrapper .banner_top1-slider a {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  /* transition: transform 0.5s ease, opacity 0.5s ease; */
+}
+
+.content1 .banner_top_1 .banner_top1-slider-wrapper .banner_top1-slider a img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.content1 .banner_top_1 .banner_top1-slider-wrapper .banner_top_1-slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.content1 .banner_top_1 .banner_top1-slider-wrapper .banner_top_1-slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.content1
+  .banner_top_1
+  .banner_top1-slider-wrapper
+  .banner_top_1-slider-nav
+  a:hover {
+  opacity: 1;
+}
+
+.content1
+  .banner_top_1
+  .banner_top1-slider-wrapper
+  .banner_top_1-slider-nav
+  a:hover {
+  opacity: 1;
 }
 
 .content1 .banner_top_2_3 {
@@ -269,11 +343,6 @@ nav .nav_wrapper .dropdown-menu.active {
 .content1 .banner_top_4_6 a img {
   width: 100%; /* Hình ảnh sẽ chiếm toàn bộ chiều rộng của container */
   height: auto; /* Giữ tỷ lệ của hình ảnh */
-}
-
-.content1 .banner_top_1 a img {
-  width: 100%;
-  height: auto;
 }
 
 /* ================================================== */
