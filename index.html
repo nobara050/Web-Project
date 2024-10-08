@@ -119,13 +119,13 @@
                 <li>
                   <a href="#">
                     <img src="./images/sidebar_memory.png" alt="" />
-                    <p>Ổ cứng, Ram, Thẻ nhớ</p>
+                    <p>Ổ cứng, Ram</p>
                   </a>
                 </li>
                 <li>
                   <a href="#">
                     <img src="./images/sidebar_speaker.png" alt="" />
-                    <p>Loa, Micro, Webcam</p>
+                    <p>Loa, Webcam</p>
                   </a>
                 </li>
                 <li>
@@ -175,16 +175,114 @@
           </div>
           <div class="banner">
             <div class="banner1-2-3">
-              <div class="slider">slider</div>
-              <div class="banner2-3">banner2-3</div>
+              <div class="slider">
+                <div class="slideshow-container">
+                  <div class="mySlides fade">
+                    <a href="">
+                      <img
+                        src="./images/banner_top_1a.png"
+                        alt="Slide 1"
+                        class="slide-image"
+                      />
+                    </a>
+                  </div>
+                  <div class="mySlides fade">
+                    <a href="">
+                      <img
+                        src="./images/banner_top_1b.png"
+                        alt="Slide 2"
+                        class="slide-image"
+                      />
+                    </a>
+                  </div>
+                  <div class="mySlides fade">
+                    <a href="#">
+                      <img
+                        src="./images/banner_top_1c.png"
+                        alt="Slide 3"
+                        class="slide-image"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- Next and previous buttons -->
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                  <!-- Dots for navigation, now inside the image area -->
+                  <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
+                </div>
+                <script src="index.js"></script>
+              </div>
+              <div class="banner2-3">
+                <a href="#">
+                  <img src="./images/banner_top_2.png" alt="IMG2" />
+                </a>
+                <a href="#">
+                  <img src="./images/banner_top_3.png" alt="IMG3" />
+                </a>
+              </div>
             </div>
-            <div class="banner4-5-6">banner4-5-6</div>
+            <div class="banner4-5-6">
+              <a href="#">
+                <img src="./images/banner_top_4.png" alt="IMG2" />
+              </a>
+              <a href="#">
+                <img src="./images/banner_top_5.png" alt="IMG3" />
+              </a>
+              <a href="#">
+                <img src="./images/banner_top_6.png" alt="IMG3" />
+              </a>
+            </div>
           </div>
         </div>
         <div class="wp-content2">wp-content2</div>
         <div class="wp-content3">wp-content3</div>
       </div>
-      <div class="wp-footer">Footer</div>
+      <div class="wp-footer">
+        <footer>
+          <div class="footer-container">
+            <!-- Section 1: Company Information -->
+            <div class="footer-section">
+              <h3>Về VinaTech</h3>
+              <ul>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+                <li><a href="#">Chính sách dịch vụ</a></li>
+              </ul>
+            </div>
+
+            <!-- Section 2: Contact Info -->
+            <div class="footer-section">
+              <h3>Thông tin liên hệ</h3>
+              <ul>
+                <li><a href="#">Email: 22520226@gm.edu.uit.com</a></li>
+                <li><a href="#">Phone: 0989699511</a></li>
+              </ul>
+            </div>
+
+            <!-- Section 3: Social Media Links -->
+            <div class="footer-section">
+              <h3>Kết nối với chúng tôi</h3>
+              <div class="social-media">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Instagram</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Copyright Section -->
+          <div class="footer-bottom">
+            <hr />
+            <p>&copy; 2024 VinaTech. All no rights reserved.</p>
+          </div>
+        </footer>
+      </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
